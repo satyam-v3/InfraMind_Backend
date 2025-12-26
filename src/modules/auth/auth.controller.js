@@ -1,4 +1,5 @@
 import { loginAdmin } from "./auth.service.js";
+import Admin from "./auth.model.js";
 
 export const login = async (req, res, next) => {
   try {
@@ -8,4 +9,8 @@ export const login = async (req, res, next) => {
     err.statusCode = 401;
     next(err);
   }
+};
+export const getAllUsers = async (req, res) => {
+  const users = await Admin.find().select("-password");
+  res.json(users);
 };

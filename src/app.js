@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { errorHandler } from "./middlewares/error.middleware.js";
-
+import predictionRoutes from "./modules/predictions/prediction.routes.js";
 import authRoutes from "./modules/auth/auth.routes.js";
 import roomRoutes from "./modules/rooms/room.routes.js";
 import sensorRoutes from "./modules/sensors/sensor.routes.js";
@@ -29,6 +29,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/rooms", roomRoutes);
 app.use("/api/sensors", sensorRoutes);
 app.use("/api/alerts", alertRoutes);
+app.use("/api/predictions", predictionRoutes);
+
 
 // error middleware last
 app.use(errorHandler);
