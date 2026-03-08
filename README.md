@@ -39,17 +39,17 @@ Make sure you have [Node.js](https://nodejs.org/) installed and a package manage
    ```bash
    git clone [https://github.com/satyam-v3/InfraMind_Backend.git](https://github.com/satyam-v3/InfraMind_Backend.git)
 
-2. Navigate into the project directory:
+2. **Navigate into the project directory:**
   cd InfraMind_Backend
 
-3. Install the dependencies:  
+3. **Install the dependencies:**
   npm install
 
-4. Environment Variables:
+4. **Environment Variables:**
   Create a .env file in the root directory.
   Add your necessary environment variables (e.g., PORT, DATABASE_URI, JWT_SECRET).
 
-5. Start the development server:
+5. **Start the development server:**
   npm run dev
   # OR
   npm start
